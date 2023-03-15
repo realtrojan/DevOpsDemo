@@ -19,7 +19,7 @@ pipeline{
 		stage('Build') {
 			steps {
 			
-			   sh 'docker build -t realtrojan/private:${BUILD_NUMBER} .'
+			   sh 'docker build -t realtrojan/my_webapp:${BUILD_NUMBER} .'
 			}
 		}
 		
@@ -33,7 +33,7 @@ pipeline{
 		stage('Push') {
 			
 			steps {
-			   sh 'docker push realtrojan/private:${BUILD_NUMBER}'
+			   sh 'docker push realtrojan/my_webapp:${BUILD_NUMBER}'
 			}
 		}
 		}
